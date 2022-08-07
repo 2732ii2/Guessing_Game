@@ -4,8 +4,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+
+        }
+        body{
+                width:100%;
+                height:100vh;
+                background:rgb(28, 27, 27,.8);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+        }
+        .con{
+            background: rgba(240, 235, 235, 0.2);
+            width:100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .first{
+            width:98%;
+            height:44%;
+            position: relative;
+            margin-top: -2%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            overflow: auto;
+            border:2px solid blue;
+            border-radius: 10px;
+            box-shadow: 0 21px 42px -10px blue;
+        }
+        .second{
+            margin-top: 2%;
+            width:98%;
+            height:44%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            padding:5px;
+            border:2px solid blue;
+            box-shadow: 0 21px 42px -10px blue;
+        }
+        
+        .part1{
+            position: relative;
+            width:98%;
+            height: 50%;
+            padding:10px;
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+           
+        }
+        h1{
+            color:white;
+            text-shadow: 4px 4px 8px blue;
+            font-size: 32px;
+        }
+        button{
+            width:150px;
+            height: 60px;
+            background: blue;
+            outline: none;
+            color:white;
+            font-size: 28px;
+            border-radius: 20px;
+            border: none;
+        }
+        #m{
+            font-size: 52px;
+            
+            margin-left: 20px;
+            text-shadow: 8px 4px 8px blue;
+        }
+        .part2{
+            width:40%;
+            position:fixed;
+            height: 300px;
+            border-radius: 20px;
+            perspective: 1000px;
+            margin-top: 200px;
+            margin-left: auto;
+            background: blue;
+            display: flex;
+            box-shadow: 0 21px 42px -10px blue;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            color:white;
+            text-align: center;
+            margin-right: auto;
+            border: 2px solid white;
+        }
+        .one{
+            width: 400px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* border: 2px solid black; */
+        }
+        .two{
+            width: 400px;
+            height: 350px;
+            display: flex;
+            align-items: right;
+            column-gap: 20px;
+            flex-direction: column;
+            /* border: 2px solid black; */
+        }
+        input{
+            outline: none;
+            border: 2px solid blue;
+            width:350px;
+            margin-top: -20%;
+            background: rgb(250, 250, 250,.8);
+            box-shadow: 0px 4px 15px blue;
+            border-radius: 20px;
+            height: 50px;
+            text-align: center;
+            color:white;
+            font-size: 32px;
+            text-transform: capitalize;
+        }
+        #btn{
+            margin-top: 5%;
+        }
+        #_s{
+            margin-top: 35px;
+            font-size: 38px;
+            margin-right: 10px;
+            text-align: right;
+        }
+        
+        
+    </style>
 </head>
 <body>
-    
+    <div class="con">
+        <div class="first">
+            <div class="part1">
+                <button onclick="again()" id="main_btn" >Try Again</button>
+                <h1 id="m"> Guessing game</h1>
+                <h1>  <pre>  ( 1 < 7 )  </pre>  </h1>
+                
+            </div>
+            <div class="part2">
+                <h2>Guess The Number : <span>?</span></h2>
+            </div>
+        </div>
+        <div class="second">
+            <div class="one">
+                <input type="number">
+                <button onclick="checker()" id="btn">Check</button>
+            </div>
+            <div class="two">
+                <h1 id="_s"> <span id="sp_1"> Start Gaming . . .</span></h1>
+                <h1 class="_one_2" id="_s" >Count of Try = <span id="sp">0</span> </h1>
+                <h1  id="_s" >Last Score = <span id="sp_2">0</span> </h1>
+                <h1></h1>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
